@@ -1,0 +1,112 @@
+
+.proto-polsector-archive-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 60px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.proto-ppcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    position: relative;
+    border: 1px solid #cccccc;
+    min-width: 300px;
+    width: 350px;
+    height: 400px;
+    border-radius: 5px;
+    padding: 25px;
+    transition: all 0.5s ease-in-out;
+    background-color: #fff;
+    overflow: hidden;
+
+    &:hover {
+        border-color: var(--global-palette1);
+        box-shadow:
+        0px 0px 2.2px rgba(0, 0, 0, 0.07),
+        0.8px 0.8px 5.3px rgba(0, 0, 0, 0.05),
+        2.7px 2.7px 10px rgba(0, 0, 0, 0.042),
+        6.4px 6.4px 17.9px rgba(0, 0, 0, 0.035),
+        ;
+
+        .pp-title {
+            color: var(--global-palette1);
+        }
+
+        .pp-footer {
+            color: var(--global-palette1);
+        }
+    }
+
+    .pp-tax {
+        display: block;
+        line-height: 1.2;
+        font-size: 1rem;
+        padding: 5px 10px 5px 10px;
+        position: relative;
+        color: var(--global-palette5);
+        margin-left: -25px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        color: white;
+        font-weight: 500;
+        background-color: $cy_orange;
+        z-index: 10;
+        width: fit-content;
+    }
+
+    .pp-title {
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        position: relative;
+        line-height: 1.4;
+        font-weight: 500;
+        font-size: 18px;
+        min-height: 85px;
+        color: var(--global-palette5);
+        border: 1px solid var(--global-palette1);
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        border-left: 0px solid transparent;
+        padding: 15px;
+        margin-left: -25px;
+        transition: all 0.5s ease-in-out;
+        // background-color: rgb(213,120,0,0.2);
+        z-index: 10;
+    }
+
+    .pp-excerpt {
+        display: block;
+        font-size: 16px;
+        flex: 1 1 auto;
+        position: relative;
+        color: var(--global-palette5);
+    }
+
+    .pp-footer {
+        display: block;
+        color: var(--global-palette5);
+        border-top: 1px solid #ccc;
+        padding-top: 8px;
+        margin-bottom: -10px;
+        font-weight: bold;
+        font-size: small;
+        text-align: right;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.contrib-header {
+    text-align: center;
+    font-variant-caps: all-petite-caps;
+}

@@ -1,0 +1,34 @@
+.proto-content-wrap {
+  display: block;
+  border: 1px solid darkgray;
+}
+.proto-content-wrap H4 {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.proto-content-wrap H6 {
+  font-size: 95%;
+  font-weight: 300;
+}
+.proto-content-wrap .proto-tax-pill {
+  font-size: small;
+  display: block;
+  background-color: transparent;
+  color: darkgrey;
+  width: max-content;
+  padding: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.6;
+  border-radius: 5px;
+  border: 1px solid lightblue;
+}
+.proto-content-wrap .proto-tax-pill:hover {
+  background-color: cornflowerblue;
+  color: white;
+}
+.proto-content-wrap .proto-posted-on {
+  font-size: smaller;
+}
+
+/*# sourceMappingURL=editor-style.css.map */

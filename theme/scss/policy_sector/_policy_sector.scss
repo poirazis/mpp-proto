@@ -1,0 +1,75 @@
+.polsector-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+
+a.no-underline {
+    text-decoration: none;
+}
+
+.polsector-card
+{
+    display: block;
+    position: relative;
+    border: 1px solid #ccc;
+    width: 356px;
+    height: 136px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    // overflow: hidden;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        border-color: #D57800 ;
+        box-shadow:
+        0px 0px 2.2px rgba(0, 0, 0, 0.07),
+        0.8px 0.8px 5.3px rgba(0, 0, 0, 0.05),
+        2.7px 2.7px 10px rgba(0, 0, 0, 0.042),
+        6.4px 6.4px 17.9px rgba(0, 0, 0, 0.035),
+        ;
+
+        .count 
+        {
+            color: #D57800;
+        }
+    }
+
+    .title {
+        display: block;
+        position: relative;
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--global-palette5);
+        z-index: 2;
+        width: 66%;
+    }
+
+    .count {
+        text-align: right;
+        padding-right: 20px;
+        color: #F0F0F0;
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+        height: 100%;
+        font-weight: bold;
+        font-size: 60pt;
+        z-index: 0;
+
+        .small-caps {
+            position: relative;
+            margin-top: -30px;
+            font-size: 14px;
+        }
+    }
+}
