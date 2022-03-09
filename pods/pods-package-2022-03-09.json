@@ -1,7 +1,7 @@
 {
     "meta": {
         "version": "2.8.10",
-        "build": 1646826387
+        "build": 1646838851
     },
     "pods": [
         {
@@ -352,30 +352,6 @@
             ]
         },
         {
-            "name": "specialty",
-            "id": 2237,
-            "label": "Specialties",
-            "description": "",
-            "type": "taxonomy",
-            "storage": "meta",
-            "label_singular": "Specialty",
-            "public": "1",
-            "show_ui": "1",
-            "hierarchical": "1",
-            "rest_enable": "1",
-            "_migrated_28": "1",
-            "groups": [
-                {
-                    "name": "more_fields",
-                    "id": 2238,
-                    "label": "More Fields",
-                    "description": "",
-                    "weight": 0,
-                    "fields": []
-                }
-            ]
-        },
-        {
             "name": "team_member",
             "id": 1345,
             "label": "Team Members",
@@ -593,28 +569,6 @@
                     ]
                 }
             ]
-        }
-    ],
-    "templates": [
-        {
-            "name": "PolicyPortfolioArchive",
-            "code": "<div>\r\n\t<div><a href={@permalink}> {@name} <\/a> <\/div>\r\n<\/div>",
-            "id": 1437,
-            "_edit_last": "1",
-            "_edit_lock": "1645628400:1",
-            "pod_reference": {
-                "pod": "policy_portfolio"
-            }
-        },
-        {
-            "name": "Single Team Member",
-            "code": "<div>\r\n\t{@name}\t\r\n<\/div>",
-            "id": 1488,
-            "_edit_last": "1",
-            "_edit_lock": "1645627516:1",
-            "pod_reference": {
-                "pod": ""
-            }
         }
     ]
 }

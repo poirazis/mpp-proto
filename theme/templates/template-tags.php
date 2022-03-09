@@ -7,16 +7,24 @@
 function the_team_member_card (int $member_id) {
 
     $mypods = pods('team_member' , $member_id);
+
     if ($mypods)
     {
-        $thumb_url = wp_get_attachment_image_src( get_post_thumbnail_id( $member_id , 'large' ));
+        $thumb = wp_get_attachment_image_src ( get_post_thumbnail_id( $member_id , 'large' ));
 
-        if ( !empty($thumb_url)) { ?>
+        if ( empty($thumb) ) { 
+            $thumb_url = get_stylesheet_directory_uri() . '/assets/no_profile_pic.png';
+        }
+        else {
+            $thumb_url = $thumb[0];
+        }
+        
+        ?>
 
             <div class="proto-team-member-card">
                 <a href="<?php echo get_permalink($member_id); ?> ">
                     <div class = "proto-thumb-container">
-                        <div class = "proto-thumb" style="background-image: url( <?php echo $thumb_url[0]; ?> )"></div> 
+                        <div class = "proto-thumb" style="background-image: url( <?php echo $thumb_url; ?> )"></div> 
                     </div>
           
                     <h5> <?php echo get_the_title($member_id); ?> </h5>
@@ -24,8 +32,7 @@ function the_team_member_card (int $member_id) {
                 </a>
             </div>
 
-            <?php          
-        }
+        <?php          
     }
 }
 
