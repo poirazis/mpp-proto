@@ -10,7 +10,7 @@ function the_team_member_card (int $member_id) {
 
     if ($mypods)
     {
-        $thumb = wp_get_attachment_image_src ( get_post_thumbnail_id( $member_id , 'large' ));
+        $thumb = wp_get_attachment_image_src ( get_post_thumbnail_id( $member_id ), 'large' );
 
         if ( empty($thumb) ) { 
             $thumb_url = get_stylesheet_directory_uri() . '/assets/no_profile_pic.png';
@@ -75,16 +75,18 @@ function the_team_member_activity (int $member_id) {
             $the_terms_html = null;
 
             if (get_post_type() === 'policy_proposal') { 
-                $the_terms = get_the_terms( $post->ID, 'polsector', '' , ' | ' );     
+                $the_terms = get_the_terms( $post->ID, 'polsector', '' , ' | ' );
+                $tax_class = "pc-tax-pill";     
             } else {
                 $the_terms = get_the_terms ($post->ID, 'category', '', ' ', '');
+                $tax_class = "cat-tax-pill";
             }
 
             if ($the_terms) {
 
-                $the_terms_html = '<div>';
+                $the_terms_html = '<div class="tax-pills">';
                 foreach ($the_terms as $term) {
-                    $the_terms_html .= '<spanl class="pc-tax-pill">' . $term->name . '</span>';
+                    $the_terms_html .= '<span class="' . $tax_class . '">' . $term->name . '</span>';
                 }
                 $the_terms_html .= '</div>';
             }
@@ -96,9 +98,9 @@ function the_team_member_activity (int $member_id) {
                 </div>
 
                 <div class="cd-timeline-content">
-                    <h5 class="posted_on"> <?php echo get_the_date('F j, Y'); ?> </h5>
                     <?php echo $the_terms_html; ?> 
                     <a href="<?php the_permalink(); ?>"><h2> <?php the_title(); ?> </h2> </a>
+                    <h5 class="posted_on"> <?php echo get_the_date('F j, Y'); ?> </h5>
                     <p> <?php the_excerpt(); ?></p>
                 </div> <!-- cd-timeline-content -->
             </div> <!-- cd-timeline-block -->

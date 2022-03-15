@@ -7,6 +7,13 @@
     row-gap: 60px;
     margin-bottom: 30px;
     justify-content: space-between;
+
+    a {
+        display: inline-flex;
+        flex: 1 1 0;
+        width: 100%;
+        min-width: 300px;
+    }
 }
 
 .proto-ppcard {
@@ -17,9 +24,8 @@
     align-items: stretch;
     position: relative;
     border: 1px solid #cccccc;
-    min-width: 300px;
-    width: 350px;
-    height: 400px;
+    max-width: 356px;
+    aspect-ratio: 2/3;
     border-radius: 5px;
     padding: 25px;
     transition: all 0.5s ease-in-out;
@@ -71,7 +77,7 @@
         line-height: 1.4;
         font-weight: 500;
         font-size: 18px;
-        min-height: 85px;
+        min-height: 100px;
         color: var(--global-palette5);
         border: 1px solid var(--global-palette1);
         border-radius: 5px;
@@ -86,6 +92,7 @@
     }
 
     .pp-excerpt {
+        padding-top: 15px;
         display: block;
         font-size: 16px;
         flex: 1 1 auto;

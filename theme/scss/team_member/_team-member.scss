@@ -54,7 +54,8 @@
         display: block;
         text-align: center;
         overflow: wrap;
-        max-width: 200px;;
+        max-width: 356px;
+        min-width: 250px;
 
         h5 {
             margin: 0px 0px 0px 0px !important;
@@ -76,8 +77,8 @@
         .proto-thumb-container {
             display: block;
             overflow: hidden;
-            width: 200px;
-            height: 200px;
+            width: 98%;
+            aspect-ratio: 1.61;
             margin-bottom: 10px;
             border-radius: 5px;
     
@@ -99,8 +100,8 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 filter: grayscale(100);
-                opacity: 0.75;
-                transition: all .6s;
+                opacity: 0.85;
+                transition: all .4s;
                 padding: 10px;
         
                 &::after {
@@ -114,7 +115,7 @@
                     height: 100%;
                     border: 1px solid #ccc;
                     z-index: 2;
-                    transition:  all .6s;
+                    transition:  all .4s;
                 }
         
                 &:hover {
@@ -125,6 +126,7 @@
         
                     &::after {
                         border-color: $gr_blue;
+                        border-width: 2px;
                         transform: scale(0.9);
                     }
                 }
@@ -220,17 +222,28 @@
 
     .posted_on {
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 300;
         color: var(--global-palette5);
     }
 
+    .tax-pills {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 8px;
+      margin-bottom: 8px;
+    }
     .pc-tax-pill, .cat-tax-pill  { 
 
         display: block;
         font-size: 16px;
         font-weight: 500;
-        color: var(--global-palette6);
-        margin-bottom: 15px;
+        line-height: 1.7;
+        color: #eee;
+        background-color: var(--global-palette1);
+        width: fit-content;
+        padding: 0 8px 0 8px;
+        border-radius: 3px;
 
         a {
             color: var(--global-palette9) !important;
@@ -239,7 +252,7 @@
     }
 
     .cat-tax-pill {
-        background-color: var(--global-palette2);
+        background-color: $gr_blue;
     }
 
 
